@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
           <li><a onClick={() => scrollToPart('Mint')}>Mint</a></li>
           <li><a onClick={() => scrollToPart('MetaPlus')}>MetaPlus</a></li>
           <li><a onClick={() => scrollToPart('Airdrop')}>Airdrop</a></li>
-          <li><a href={''} target="_blank" rel="noreferrer"><img className="telegram" src={telegram} /></a></li>
+          <li><a href={'https://t.me/forart_co'} target="_blank" rel="noreferrer"><img className="telegram" src={telegram} /></a></li>
           <li><a href={'https://twitter.com/forart_ai'} target="_blank" rel="noreferrer"><img className="twitter" src={twitter} /></a></li>
         </NavLinksContainer>
       </Wrapper>
