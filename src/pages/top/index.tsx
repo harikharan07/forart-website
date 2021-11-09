@@ -41,7 +41,7 @@ const Title = styled.div`
       line-height: 100px;
       letter-spacing: 2px;
       color: #fff;
-      width: 780px;
+      width: 700px;
     }
   
   .foot {
