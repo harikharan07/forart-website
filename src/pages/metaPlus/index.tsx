@@ -75,26 +75,6 @@ const TextContent = styled.div`
   position: relative;
 `
 
-const ItemContainer = styled.div`
-  padding: 20px 55px;
-  width: 450px;
-  height: 110px;
-  text-align: left;
-
-  .item-title {
-    opacity: 1;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .text {
-    margin-top: 10px;
-  }
-`
-
 const Line = styled.div`
   width: 1300px;
   height: 1px;

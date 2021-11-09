@@ -100,15 +100,6 @@ const Result = styled.div`
   }
 `
 
-const Line = styled.div`
-  width: 1300px;
-  height: 1px;
-  margin-left: calc((100% - 1300px) / 2);
-  background: linear-gradient(90deg,#00EBA4,#02A6F5);
-  position: relative;
-  top: -100px;
-`
-
 
 const Airdrop: React.FC = () => {
 

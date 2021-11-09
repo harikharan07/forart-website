@@ -20,17 +20,6 @@ const FootMain = styled.div`
   }
 `
 
-const FootMenu = styled.div`
-  position: absolute;
-  right: 300px;
-  
-  li {
-    list-style: none;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 20px;
-  }
-`
-
 const Register = styled.div`
   width: 100%;
   height: 80px;
