@@ -5,6 +5,9 @@ import AOS from 'aos'
 import Top from './pages/top/index'
 import Wallet from './pages/wallet/index'
 import Play from './pages/play/index'
+import MetaPlus from './pages/metaPlus'
+import Airdrop from './pages/airdrop'
+import Foot from './pages/foot'
 
 const App = () => {
   AOS.init({
@@ -18,6 +21,9 @@ const App = () => {
       <Top />
       <Wallet />
       <Play />
+      <MetaPlus />
+      <Airdrop />
+      <Foot />
     </div>
   )
 }

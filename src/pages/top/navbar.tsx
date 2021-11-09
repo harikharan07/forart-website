@@ -15,9 +15,8 @@ function scrollToPart(anchorName: string) {
 
 const NavbarContainer = styled.div`
   width: 100%;
-  position: sticky;
-  top: 0;
-  background: #000;
+  height: 70px;
+  
   
   @media screen and (max-width: 1100px) {
     width: 100vw;
@@ -37,24 +36,26 @@ const Wrapper = styled.div`
 `
 
 const Logo = styled.div`
-  width: 116px;
-  height: 36px;
+  width: 130px;
   background: url(${LogoIcon}) no-repeat;
   background-size: 100%;
 
-
+  img {
+    width: 100%;
+  }
 `
 
 const NavLinksContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 40%;
+  width: 30%;
 
   li {
     list-style: none;
-    color: #afa4a4;
-    font-size: 12px;
+    color: white;
+    font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1100px) {
@@ -66,16 +67,14 @@ const Navbar: React.FC = () => {
   return (
     <NavbarContainer>
       <Wrapper>
-        <Logo className="logo" />
+        <Logo className="logo">
+          <img src={LogoIcon} />
+        </Logo>
         <NavLinksContainer id="NavLinksContainer">
-          <li><a onClick={() => scrollToPart('MissionContainer')}>Wallet</a></li>
-          <li><a onClick={() => scrollToPart('FeaturesContainer')}>DEX</a></li>
-          <li><a onClick={() => scrollToPart('BenefitsContainer')}>NFT</a></li>
-          <li><a onClick={() => scrollToPart('RoadMapContainer')}>DAO</a></li>
-          <li><a onClick={() => scrollToPart('RoadMapContainer')}>Media</a></li>
-          <li><a onClick={() => scrollToPart('RoadMapContainer')}>Documents</a></li>
-          <li><a onClick={() => scrollToPart('RoadMapContainer')}>Support</a></li>
-
+          <li><a onClick={() => scrollToPart('MissionContainer')}>Incubation</a></li>
+          <li><a onClick={() => scrollToPart('FeaturesContainer')}>Mint</a></li>
+          <li><a onClick={() => scrollToPart('BenefitsContainer')}>MetaPlus</a></li>
+          <li><a onClick={() => scrollToPart('RoadMapContainer')}>Airdrop</a></li>
         </NavLinksContainer>
       </Wrapper>
     </NavbarContainer>

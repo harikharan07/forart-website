@@ -6,11 +6,14 @@ import BannerImage from '../../image/top/banner.jpg'
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 130vh;
+  height: 100vh;
   background: url(${BannerImage}) no-repeat;
   background-size: 100%;
-  //background-position: top 120px right 0px;
   
+  .filter {
+    height: 100vh;
+    //backdrop-filter: blur(4px);
+  }
 `
 
 const Container = styled.div`
@@ -34,9 +37,9 @@ const Title = styled.div`
 
   .slogan{
       font-weight: 600;
-      font-size: 65px;
+      font-size: 68px;
       line-height: 100px;
-      letter-spacing: -.05em;
+      letter-spacing: 2px;
       color: #fff;
       width: 780px;
     }
@@ -57,15 +60,17 @@ const Title = styled.div`
 const Top: React.FC = () => {
   return (
     <Wrapper>
-      <Navbar />
-      <Container>
-        <Title>
-          <div>
-            <div className="slogan">Building the Worlds Best Mobile Decentralized Exchange and Wallet</div>
-            <div className="foot">Built on</div>
-          </div>
-        </Title>
-      </Container>
+      <div className="filter">
+        <Navbar />
+        <Container>
+          <Title>
+            <div>
+              <div className="slogan">AI + NFT + DeFi , Everything is possible in Metaverse.</div>
+              <div className="foot">Built on</div>
+            </div>
+          </Title>
+        </Container>
+      </div>
     </Wrapper>
 
   )
