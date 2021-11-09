@@ -65,8 +65,8 @@ const Top: React.FC = () => {
         <Container>
           <Title>
             <div>
-              <div className="slogan">AI + NFT + DeFi , Everything is possible in Metaverse.</div>
-              <div className="foot">Built on</div>
+              <div className="slogan">AI + NFT + DeFi Everything is possible in Metaverse.</div>
+              {/*<div className="foot">Built on</div>*/}
             </div>
           </Title>
         </Container>

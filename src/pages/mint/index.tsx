@@ -189,7 +189,7 @@ type PlayItem = {
   detail:string
 }
 
-const Play: React.FC = () => {
+const Mint: React.FC = () => {
 
   const items: PlayItem[] = [
     {
@@ -207,7 +207,7 @@ const Play: React.FC = () => {
   ]
 
   return (
-    <Wrapper >
+    <Wrapper id="Mint">
       <Container>
         <Title >
           <div>
@@ -232,4 +232,4 @@ const Play: React.FC = () => {
   )
 }
 
-export default Play
+export default Mint

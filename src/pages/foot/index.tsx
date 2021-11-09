@@ -3,20 +3,42 @@ import styled from 'styled-components'
 import LogoIcon from '../../image/top/logo.png'
 
 const FootContent = styled.div`
-  height: 280px;
-  background: #0D0D0D;
+  height: 180px;
   padding-top: 50px;
+  position: relative;
 `
 
 const FootMain = styled.div`
-  width: 1300px;
-  margin-left: calc((100% - 1300px) / 2);
+  width: 1200px;
+  margin-left: calc((100% - 1200px) / 2);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
   
   img {
-    width: 180px;
+    width: 200px;
   }
+`
+
+const FootMenu = styled.div`
+  position: absolute;
+  right: 300px;
+  
+  li {
+    list-style: none;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 20px;
+  }
+`
+
+const Register = styled.div`
+  width: 100%;
+  height: 80px;
+  font-size: 13px;
+  line-height: 80px;
+  color: rgba(255,255,255,0.7);
+  position: absolute;
+  bottom: 0;
 `
 
 const Foot:React.FC = () => {
@@ -25,6 +47,9 @@ const Foot:React.FC = () => {
       <FootMain>
         <img src={LogoIcon} />
       </FootMain>
+      <Register>
+        <div>© 2021 Forart - Terms of Use | Privacy Policy | Cookie Settings</div>
+      </Register>
     </FootContent>
   )
 }

@@ -113,7 +113,7 @@ const Line = styled.div`
 const Airdrop: React.FC = () => {
 
   return (
-    <div className="section">
+    <div className="section" id="Airdrop">
       <Wrapper>
         <Container>
           <Title>

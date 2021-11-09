@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import LogoIcon from '../../image/top/logo.png'
+import telegram from '../../image/top/telegram.png'
+import twitter from '../../image/top/twitter.png'
 
 function scrollToPart(anchorName: string) {
   if (anchorName) {
@@ -47,15 +49,20 @@ const Logo = styled.div`
 
 const NavLinksContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 30%;
+  width: 40%;
 
   li {
     list-style: none;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    
+    img {
+      width: 30px;
+    }
   }
 
   @media screen and (max-width: 1100px) {
@@ -71,10 +78,12 @@ const Navbar: React.FC = () => {
           <img src={LogoIcon} />
         </Logo>
         <NavLinksContainer id="NavLinksContainer">
-          <li><a onClick={() => scrollToPart('MissionContainer')}>Incubation</a></li>
-          <li><a onClick={() => scrollToPart('FeaturesContainer')}>Mint</a></li>
-          <li><a onClick={() => scrollToPart('BenefitsContainer')}>MetaPlus</a></li>
-          <li><a onClick={() => scrollToPart('RoadMapContainer')}>Airdrop</a></li>
+          <li><a onClick={() => scrollToPart('Incubation')}>Incubation</a></li>
+          <li><a onClick={() => scrollToPart('Mint')}>Mint</a></li>
+          <li><a onClick={() => scrollToPart('MetaPlus')}>MetaPlus</a></li>
+          <li><a onClick={() => scrollToPart('Airdrop')}>Airdrop</a></li>
+          <li><a href={''} target="_blank" rel="noreferrer"><img className="telegram" src={telegram} /></a></li>
+          <li><a href={'https://twitter.com/forart_ai'} target="_blank" rel="noreferrer"><img className="twitter" src={twitter} /></a></li>
         </NavLinksContainer>
       </Wrapper>
     </NavbarContainer>

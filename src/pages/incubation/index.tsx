@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import solana from '../../image/wallet/solana.svg'
+import polygon from '../../image/wallet/polygon.svg'
+import eth from '../../image/wallet/eth.png'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -100,13 +103,45 @@ const Line = styled.div`
   background: linear-gradient(90deg,#00EBA4,#02A6F5);
 `
 
+const Built = styled.div`
+  color: white;
+  position: relative;
+  top: -110px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    margin-left: 50px;
+  }
+
+  img:nth-of-type(1) {
+    height: 30px;
+  }
+  
+  img:nth-of-type(2) {
+    height: 20px;
+  }
+  .eth {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+    
+    img {
+      margin-right: 10px;
+    }
+  }
+`
+
 type WalletItem = {
   title: string
   detail:string
 }
 
 
-const Wallet: React.FC = () => {
+const Incubation: React.FC = () => {
 
   const items: WalletItem[] = [
     {
@@ -127,9 +162,15 @@ const Wallet: React.FC = () => {
     }
   ]
   return (
-    <div className="section">
+    <div className="section" id="Incubation">
       <Wrapper>
         <Container>
+          <Built>
+            Built on
+            <img src={polygon} />
+            <img src={solana} />
+            <div className="eth"><img src={eth} />Ethereum</div>
+          </Built>
           <Title>
             <div>
               The
@@ -161,4 +202,4 @@ const Wallet: React.FC = () => {
   )
 }
 
-export default Wallet
+export default Incubation

@@ -3,11 +3,11 @@ import './App.css'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import Top from './pages/top/index'
-import Wallet from './pages/wallet/index'
-import Play from './pages/play/index'
 import MetaPlus from './pages/metaPlus'
 import Airdrop from './pages/airdrop'
 import Foot from './pages/foot'
+import Incubation from './pages/incubation/index'
+import Mint from './pages/mint/index'
 
 const App = () => {
   AOS.init({
@@ -19,8 +19,8 @@ const App = () => {
   return (
     <div className="App" >
       <Top />
-      <Wallet />
-      <Play />
+      <Incubation />
+      <Mint />
       <MetaPlus />
       <Airdrop />
       <Foot />
