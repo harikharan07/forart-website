@@ -71,7 +71,7 @@ const RoadmapItem = styled.div`
   }
 
 
-  &:nth-child(4) {
+  &:nth-child(3) {
     .arrow {
       display: none;
     }
@@ -128,7 +128,7 @@ const RightArea = styled.div`
   
   .item-title{
     font-weight: 600;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 29px;
     color: #fff;
     margin: 20px;
@@ -137,7 +137,7 @@ const RightArea = styled.div`
   
   .item-detail {
     margin: 20px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 19px;
     color: #fff;
     font-weight: 500;
@@ -149,7 +149,7 @@ type mapItem = {
   year:string
   describe:string
   title: string
-  detail:string
+  detail: string[]
 }
 
 
@@ -159,31 +159,36 @@ const Roadmap: React.FC = () => {
     {
       icon: Idea,
       year:'2021',
-      describe:'IDEA GENERATION',
-      title:'Title1',
-      detail:'Outline the road to success using this eye-catching Neon Product Roadmap Template. Apply your own choice of colors, icons and font styles. For more creative roadmap templates, check out Venngages templates library!'
+      describe:'Q4',
+      title:'Milestone 1',
+      detail:[
+        '1. AI-Kit on the testnet',
+        '2. Airdrop limited Financial NFTs.',
+        '3. NFT + DeFi upgrade-function on the testnet'
+      ]
     },
     {
       icon: Search,
-      year:'2021',
-      describe:'RESEARCH',
-      title:'Title2',
-      detail:'Outline the road to success using this eye-catching Neon Product Roadmap Template. Apply your own choice of colors, icons and font styles. For more creative roadmap templates, check out Venngages templates library!'
+      year:'2022',
+      describe:'Q1',
+      title:'Milestone 2',
+      detail:[
+        '1. IDO (January 2022)',
+        '2. NFT Saas on the testnet',
+        '3. MetaPlus on the testnet'
+      ]
     },
     {
       icon: Design,
-      year:'2021',
-      describe:'DESIGN',
-      title:'Title3',
-      detail:'Outline the road to success using this eye-catching Neon Product Roadmap Template. Apply your own choice of colors, icons and font styles. For more creative roadmap templates, check out Venngages templates library!'
+      year:'2022',
+      describe:'Q2',
+      title:'Milestone 3',
+      detail:[
+        '1. mainnet',
+        '2. Support cross-chain'
+      ]
     },
-    {
-      icon: Launch,
-      year:'2021',
-      describe:'LAUNCH',
-      title:'Title4',
-      detail:'Outline the road to success using this eye-catching Neon Product Roadmap Template. Apply your own choice of colors, icons and font styles. For more creative roadmap templates, check out Venngages templates library!'
-    }
+
   ]
   return (
     <div className="section" id="Roadmap">
@@ -202,17 +207,18 @@ const Roadmap: React.FC = () => {
                       <div>{item.describe}</div>
                     </div>
                     <img className="arrow" src={Arrow} />
-
-
                   </LeftArea>
                   <RightArea >
                     <div className="item-title">{item.title}</div>
-                    <div className="item-detail" >{item.detail}</div>
+                    <div className="item-detail" >
+                      {item.detail.map((row, idx) => (
+                        <p key={idx}>{row}</p>
+                      ))}
+                    </div>
                   </RightArea>
                 </RoadmapItem>
               ))
             }
-
 
           </RoadmapBorder>
         </RoadmapContainer>
