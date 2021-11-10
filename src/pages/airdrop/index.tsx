@@ -121,7 +121,7 @@ const Airdrop: React.FC = () => {
             </JoinContent>
             <Result>
               You may get our total
-              <p>1000<span> scarce NFTs Airdrop!</span></p>
+              <p>3000<span> scarce NFTs Airdrop!</span></p>
             </Result>
           </ItemBorder>
         </Container>
