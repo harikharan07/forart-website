@@ -62,7 +62,7 @@ const ItemBorder = styled.div`
     height: 100%;
     position: absolute;
     background: linear-gradient(90deg,#02A6F5,#00EBA4,#000000);
-    
+    border-radius: 10px;
     opacity: .7;
     left: 0;
     top: 0;

@@ -73,6 +73,8 @@ const ItemBorder = styled.div`
     opacity: .7;
     left: 0;
     top: 0;
+    border-radius: 10px;
+
   }
 `
 

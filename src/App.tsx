@@ -8,6 +8,7 @@ import Airdrop from './pages/airdrop'
 import Foot from './pages/foot'
 import Incubation from './pages/incubation/index'
 import Mint from './pages/mint/index'
+import Roadmap from './pages/roadmap'
 
 const App = () => {
   AOS.init({
@@ -23,6 +24,7 @@ const App = () => {
       <Mint />
       <MetaPlus />
       <Airdrop />
+      <Roadmap />
       <Foot />
     </div>
   )
