@@ -4,7 +4,6 @@ import Idea from '../../image/roadmap/idea.png'
 import Arrow from '../../image/roadmap/arrow.png'
 import Search from '../../image/roadmap/search.png'
 import Design from '../../image/roadmap/design_nor.png'
-import Launch from '../../image/roadmap/launch.png'
 
 
 const Wrapper = styled.div`

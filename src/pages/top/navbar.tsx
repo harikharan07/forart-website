@@ -51,7 +51,7 @@ const NavLinksContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 40%;
+  width: 500px;
 
   li {
     list-style: none;
