@@ -9,7 +9,7 @@ import Launch from '../../image/roadmap/launch.png'
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 1300px;
+  height: 1100px;
   padding-top: 30px;
   background: radial-gradient(#00EBA4 5%, #000000 45%);
   
