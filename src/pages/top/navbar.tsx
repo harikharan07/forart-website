@@ -16,7 +16,9 @@ function scrollToPart(anchorName: string) {
 }
 
 const NavbarContainer = styled.div`
+ display: flex;
   width: 100%;
+  justify-content: center;
   height: 70px;
   
   
@@ -27,11 +29,11 @@ const NavbarContainer = styled.div`
 `
 
 const Wrapper = styled.div`
+  width:1300px;
   display: flex;
   height: 72px;
   justify-content: space-between;
   align-items: center;
-  padding: 0 290px;
 
  
 
@@ -51,7 +53,7 @@ const NavLinksContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 500px;
+  width: 600px;
 
   li {
     list-style: none;

@@ -9,6 +9,7 @@ import Foot from './pages/foot'
 import Incubation from './pages/incubation/index'
 import Mint from './pages/mint/index'
 import Roadmap from './pages/roadmap'
+import './font/font.css'
 
 const App = () => {
   AOS.init({

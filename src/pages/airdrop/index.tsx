@@ -96,7 +96,7 @@ const Result = styled.div`
   
   p {
     color: #00EBA4;
-    font-size: 64px;
+    font-size: 45px;
   }
 `
 

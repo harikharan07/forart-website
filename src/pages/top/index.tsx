@@ -30,8 +30,6 @@ const Container = styled.div`
 `
 
 const Title = styled.div`
-  width: 1300px;
-  margin-left: calc((100% - 1300px) / 2);
   text-align: left;
 
 
@@ -43,17 +41,6 @@ const Title = styled.div`
       color: #fff;
       width: 700px;
     }
-  
-  .foot {
-    width: 780px;
-    margin-top: 212px;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 1.227;
-    color: #fff;
-    position: relative;
-    display: inline-block;
-  }
 
 `
 
