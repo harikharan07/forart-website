@@ -51,7 +51,7 @@ const ItemBorder = styled.div`
   margin: 80px auto;
   font-weight: 600;
   color: #fff;
-  border: 2px solid #00EBA4;
+  //border: 2px solid #00EBA4;
   
   &:before {
     content: '';

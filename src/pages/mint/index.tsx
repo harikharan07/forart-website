@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 import React from 'react'
+import Gift from '../../image/mint/gifts.png'
+import Upgrade from '../../image/mint/upgrade.png'
+import Coin from '../../image/mint/coins.png'
 
 
 const Wrapper = styled.div`
@@ -57,17 +60,7 @@ const ItemBorder = styled.div`
   align-items: center;
   font-weight: 600;
   color: #fff;
- ///* &:before {
- //   content: '';
- //   width: 100%;
- //   height: 100%;
- //   position: absolute;
- //   background: linear-gradient(90deg,#67ebba,#67eaba .33%,#69c2ce 15.61%,#6ba1de 31.22%,#6c87ea 47.25%,#6d75f3 63.72%,#6e6af8 80.92%,#6e66fa);
- //   opacity: .7;
- //   left: 0;
- //   top: 0;
- // }*/
-  
+
 `
 
 const ItemContainer = styled.div`
@@ -79,9 +72,21 @@ const ItemContainer = styled.div`
   margin-bottom: 95px;
   border: 2px solid #00EBA4;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
  // background: linear-gradient(90deg,#67ebba,#67e5bd 14.2%,#68d5c5 32.88%,#6ab9d2 54.06%,#6c93e4 77.03%,#6e66fa);
 
-
+  &:after {
+    content: "";
+    width: 153px;
+    height: 153px;
+    border-radius: 50%;
+    background: linear-gradient(270deg, #67ebba, #67eaba .34%, #69c2ce 15.61%, #6ba1de 31.22%, #6c87ea 47.25%, #6d75f3 63.72%, #6e6af8 80.92%, #6e66fa);
+    position: absolute;
+    box-shadow: 5px 5px 5px #212121;
+    top: -0.5px;
+    left: 0;
+  }
 
   &:before {
     content: '';
@@ -95,6 +100,7 @@ const ItemContainer = styled.div`
     top: 0;
   }
 
+  
   
 
   
@@ -142,8 +148,22 @@ const ItemContainer = styled.div`
   //
   //  }
   //}
-
   
+`
+
+const IconArea = styled.div`
+  width: 153px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+  img {
+    width: 60px;
+  }
 `
 
 const ItemText = styled.div`
@@ -154,6 +174,7 @@ const ItemText = styled.div`
   height: 153px;
   width: 60%;
   text-align: left;
+  margin-right: 30px;
 
   &:nth-child(1){
     left: 170px;
@@ -185,6 +206,7 @@ const Line = styled.div`
 
 
 type PlayItem = {
+  image:any
   title: string
   detail:string
 }
@@ -193,14 +215,17 @@ const Mint: React.FC = () => {
 
   const items: PlayItem[] = [
     {
+      image: Gift,
       title:'Airdrop NFTs',
       detail: 'The platform will airdrop limited NFTs, which can be used for NFT mining on the platform to obtain native tokens.'
     },
     {
+      image: Upgrade,
       title:'Upgrade NFTs',
       detail: 'Two NFTs can be upgraded with AI, minted with native tokens, and get new scarce NFTs.'
     },
     {
+      image: Coin,
       title:'Financial NFTs',
       detail: 'The platform provides part of the financial value guarantee for scarce NFTs.'
     }
@@ -217,6 +242,7 @@ const Mint: React.FC = () => {
             {
               items.map(item => (
                 <ItemContainer key={item.title}>
+                  <IconArea ><img src={item.image} /> </IconArea>
                   <ItemText>
                     <div className="item-title">{item.title}</div>
                     <div className="item-detail">{item.detail}</div>

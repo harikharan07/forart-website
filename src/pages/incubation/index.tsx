@@ -1,8 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import solana from '../../image/wallet/solana.svg'
-import polygon from '../../image/wallet/polygon.svg'
-import eth from '../../image/wallet/eth.png'
+import solana from '../../image/incubation/solana.svg'
+import polygon from '../../image/incubation/polygon.svg'
+import eth from '../../image/incubation/eth.png'
+import One from '../../image/incubation/number-1.png'
+import Two from '../../image/incubation/number-2.png'
+import Three from '../../image/incubation/number-3.png'
+import Four from '../../image/incubation/number-4.png'
+
 
 const Wrapper = styled.div`
   width: 100%;
@@ -91,6 +96,14 @@ const ItemContainer = styled.div`
     line-height: 29px;
     position: relative;
     width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-title>img {
+    width: 25px;
+    margin-right: 15px;
+
   }
   
   .text {
@@ -138,6 +151,7 @@ const Built = styled.div`
 `
 
 type WalletItem = {
+  image:any
   title: string
   detail:string
 }
@@ -147,18 +161,22 @@ const Incubation: React.FC = () => {
 
   const items: WalletItem[] = [
     {
+      image:One,
       title:'Deep Learning Artworks',
       detail: 'According to different artistic style needs, Deep Learning Kit can generate corresponding artworks or elements to assist the artist in the creation of NFT / Metaverse. '
     },
     {
+      image:Two,
       title:'NFT SaaS',
       detail: 'Provide standard NFT / Metaverse creation specifications and agreements to form a "SaaS" service, and provide fast NFT Airdrop services for project parties and third-party platforms.'
     },
     {
+      image:Three,
       title:'Ownership certification',
       detail: 'Provide ownership certification for the NFT / Metaverse created by the platform to ensure its uniqueness and scarcity.'
     },
     {
+      image:Four,
       title:'Security',
       detail: 'Platform smart contracts will be audited by well-known and authoritative security certification companies in the industry to ensure the security of NFT / Metaverse transactions.'
     }
@@ -185,7 +203,7 @@ const Incubation: React.FC = () => {
             {
               items.map(item => (
                 <ItemContainer  key={item.title}>
-                  <div className="item-title" >{item.title}</div>
+                  <div className="item-title" ><img src={item.image} />{item.title}</div>
                   <div className="text" >{item.detail}</div>
                 </ItemContainer>
               ))

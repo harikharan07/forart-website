@@ -20,6 +20,9 @@ const NavbarContainer = styled.div`
   width: 100%;
   justify-content: center;
   height: 70px;
+  position: fixed;
+  //background-color: black;
+  z-index: 999;
   
   
   @media screen and (max-width: 1100px) {
