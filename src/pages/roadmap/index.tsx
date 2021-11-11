@@ -162,8 +162,8 @@ const Roadmap: React.FC = () => {
       title:'Milestone 1',
       detail:[
         '1. AI-Kit on the testnet',
-        '2. Airdrop limited Financial NFTs.',
-        '3. NFT + DeFi upgrade-function on the testnet'
+        '2. Airdrop Financial NFTs.',
+        '3. NFT + DeFi upgrade-function on the internet'
       ]
     },
     {
@@ -183,7 +183,7 @@ const Roadmap: React.FC = () => {
       describe:'Q2',
       title:'Milestone 3',
       detail:[
-        '1. mainnet',
+        '1. Mainnet',
         '2. Support cross-chain'
       ]
     },
