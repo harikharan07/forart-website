@@ -16,7 +16,7 @@ function scrollToPart(anchorName: string) {
 }
 
 const NavbarContainer = styled.div`
- display: flex;
+  display: flex;
   width: 100%;
   justify-content: center;
   height: 70px;
@@ -44,11 +44,16 @@ const Wrapper = styled.div`
 
 const Logo = styled.div`
   width: 130px;
-  background: url(${LogoIcon}) no-repeat;
   background-size: 100%;
 
   img {
     width: 100%;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    img {
+      width: 80%;
+    }
   }
 `
 

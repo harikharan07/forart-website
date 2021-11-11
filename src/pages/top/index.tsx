@@ -23,7 +23,6 @@ const Container = styled.div`
 
 
   @media screen and (max-width: 1100px) {
-    padding-top: 5vh;
     margin-left: 0;
     width: 100vw;
   }
@@ -41,6 +40,16 @@ const Title = styled.div`
       color: #fff;
       width: 700px;
     }
+
+  @media screen and (max-width: 1100px) {
+    text-align: center;
+    margin: 0;
+    .slogan {
+      width: 100vw;
+      font-size: 30px;
+      line-height: 50px;
+    }
+  }
 
 `
 

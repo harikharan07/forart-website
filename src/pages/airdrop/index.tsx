@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 750px;
   padding-top: 30px;
-  background: radial-gradient(#02A6F5 10%, #000000 45%);
+  background: radial-gradient(#02A6F5 5%, #000000 50%);
   
   @media screen and (max-width: 1100px) {
     height: fit-content;
@@ -73,14 +73,14 @@ const JoinContent = styled.div`
   position: relative;
   text-align: left;
   height: 100%;
-  background: #02A6F5;
+  background: #098fce;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   .join-item {
     margin-bottom: 30px;
   }
@@ -93,11 +93,14 @@ const Result = styled.div`
   position: relative;
   font-size: 46px;
   margin-left: 30px;
+  text-align: left;
   
   p {
     color: #00EBA4;
     font-size: 45px;
   }
+  
+  
 `
 
 const Line = styled.div`
@@ -130,7 +133,7 @@ const Airdrop: React.FC = () => {
             </JoinContent>
             <Result>
               You may get our total
-              <p>3000<span> scarce NFTs Airdrop!</span></p>
+              <p><span>3000</span> scarce NFTs Airdrop!</p>
             </Result>
           </ItemBorder>
         </Container>
