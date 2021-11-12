@@ -14,6 +14,13 @@ const Wrapper = styled.div`
     height: 100vh;
     //backdrop-filter: blur(4px);
   }
+  
+  @media screen and (max-width: 1100px) {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+  }
 `
 
 const Container = styled.div`
@@ -46,7 +53,7 @@ const Title = styled.div`
     margin: 0;
     .slogan {
       width: 100vw;
-      font-size: 30px;
+      font-size: 35px;
       line-height: 50px;
     }
   }

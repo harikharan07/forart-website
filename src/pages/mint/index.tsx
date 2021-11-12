@@ -8,12 +8,11 @@ import Coin from '../../image/mint/coins.png'
 const Wrapper = styled.div`
   width: 100%;
   height: 1000px;
-  background: radial-gradient(#02A6F5 3%, black 45%);
+  background: radial-gradient(#02A6F5 3%, black 45%) no-repeat;
   
   @media screen and (max-width: 1100px) {
-    height: fit-content;
-    background-size: 60%;
-    background-position: top 50% left 20%;
+    background-position: top 50% left 50%;
+    height: 650px;
   }
 `
 
@@ -22,7 +21,8 @@ const Container = styled.div`
   margin: 100px auto;
   display: flex;
   justify-content: center;
-  height: 1000px;
+  flex-direction: column;
+  align-items: center;
   background-size: 100% 100%;
 
   @media screen and (max-width: 1100px) {
@@ -33,7 +33,7 @@ const Container = styled.div`
 `
 
 const Title = styled.div`
-  width: 750px;
+  width: 100%;
   font-weight: 600;
   font-size: 38px;
   line-height: 46px;
@@ -47,19 +47,36 @@ const Title = styled.div`
     color: #00EBA4;
     opacity: .96;
   }
+
+  @media screen and (max-width: 1100px) {
+    width: 80%;
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 15px;
+
+    span {
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
 `
 
 const ItemBorder = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
+  width: 750px;
   height: 750px;
   border-radius: 10px;
   margin: 80px auto;
   align-items: center;
   font-weight: 600;
   color: #fff;
+  
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    margin: 0;
+  }
 
 `
 
@@ -100,7 +117,17 @@ const ItemContainer = styled.div`
     top: 0;
   }
 
-  
+  @media screen and (max-width: 1100px) {
+    min-width: 330px;
+    height: 130px;
+    margin-bottom: 50px;
+
+    &:after {
+      top: 15px;
+      width: 90px;
+      height: 90px;
+    }
+  }
   
 
   
@@ -158,11 +185,17 @@ const IconArea = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-
+  
   img {
     width: 60px;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    width: 90px;
+    
+    img {
+      width: 45px;
+    }
   }
 `
 
@@ -193,6 +226,21 @@ const ItemText = styled.div`
     color: #fff;
     margin-top: 18px;
   }
+  
+  @media screen and (max-width: 1100px) {
+    width: 70%;
+    margin-right: 0px;
+    height: 120px;
+
+    .item-title {
+      font-size: 16px;
+    }
+    
+    .item-detail {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  }
 `
 
 const Line = styled.div`
@@ -202,6 +250,10 @@ const Line = styled.div`
   background: linear-gradient(90deg,#00EBA4,#02A6F5);
   position: relative;
   top: -150px;
+  
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
 `
 
 
@@ -238,20 +290,21 @@ const Mint: React.FC = () => {
           <div>
             DeFi + NFT For Scarce NFTs
           </div>
-          <ItemBorder>
-            {
-              items.map(item => (
-                <ItemContainer key={item.title}>
-                  <IconArea ><img src={item.image} /> </IconArea>
-                  <ItemText>
-                    <div className="item-title">{item.title}</div>
-                    <div className="item-detail">{item.detail}</div>
-                  </ItemText>
-                </ItemContainer>
-              ))
-            }
-          </ItemBorder>
         </Title>
+
+        <ItemBorder>
+          {
+            items.map(item => (
+              <ItemContainer key={item.title}>
+                <IconArea ><img src={item.image} /> </IconArea>
+                <ItemText>
+                  <div className="item-title">{item.title}</div>
+                  <div className="item-detail">{item.detail}</div>
+                </ItemText>
+              </ItemContainer>
+            ))
+          }
+        </ItemBorder>
       </Container>
       <Line />
     </Wrapper>

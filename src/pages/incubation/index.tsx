@@ -7,18 +7,18 @@ import One from '../../image/incubation/number-1.png'
 import Two from '../../image/incubation/number-2.png'
 import Three from '../../image/incubation/number-3.png'
 import Four from '../../image/incubation/number-4.png'
+import { useMediaQuery } from 'react-responsive'
 
 
 const Wrapper = styled.div`
   width: 100%;
   height: 800px;
   padding-top: 150px;
-  background: radial-gradient(#48A283 3%, black 45%);
+  background: radial-gradient(#48A283 3%, black 45%) no-repeat;
   
   @media screen and (max-width: 1100px) {
     height: fit-content;
-    background-size: 60%;
-    background-position: top 50% left 20%;
+    background-position: top 50% left 50%;
   }
 `
 
@@ -48,12 +48,27 @@ const Title = styled.div`
     color: #00EBA4;
     opacity: .96;
   }
+  
+  @media screen and (max-width: 1100px) {
+    font-size: 25px;
+    line-height: 40px;
+
+    span {
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
 `
 
 const TextContent = styled.div`
   font-size: 20px;
   color: white;
   margin-top: 30px;
+  
+  @media screen and (max-width: 1100px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 `
 
 const ItemBorder = styled.div`
@@ -79,7 +94,11 @@ const ItemBorder = styled.div`
     left: 0;
     top: 0;
     border-radius: 10px;
-
+  }
+  
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    height: 700px;
   }
 `
 
@@ -103,11 +122,22 @@ const ItemContainer = styled.div`
   .item-title>img {
     width: 25px;
     margin-right: 15px;
-
   }
   
   .text {
     margin-top: 10px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    padding: 15px 10px;
+    height: fit-content;
+
+    .item-title {
+      font-size: 20px;
+    }
+    .text {
+      font-size: 14px;
+    }
   }
 `
 
@@ -116,6 +146,10 @@ const Line = styled.div`
   height: 1px;
   margin-left: calc((100% - 1300px) / 2);
   background: linear-gradient(90deg,#00EBA4,#02A6F5);
+
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
 `
 
 const Built = styled.div`
@@ -148,6 +182,26 @@ const Built = styled.div`
       margin-right: 10px;
     }
   }
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    
+    img {
+      margin: 0;
+      width: 70px;
+    }
+    
+    .eth {
+      font-size: 14px;
+      img {
+        width: 15px;
+        height: 23px;
+      }
+    }
+   
+  }
 `
 
 type WalletItem = {
@@ -158,6 +212,7 @@ type WalletItem = {
 
 
 const Incubation: React.FC = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 1100px)' })
 
   const items: WalletItem[] = [
     {
@@ -185,12 +240,27 @@ const Incubation: React.FC = () => {
     <div className="section" id="Incubation">
       <Wrapper>
         <Container>
-          <Built>
-            Built on
-            <img src={polygon} />
-            <img src={solana} />
-            <div className="eth"><img src={eth} />Ethereum</div>
-          </Built>
+          {
+            !isMobile && (
+              <Built>
+                Built on
+                <img src={polygon} />
+                <img src={solana} />
+                <div className="eth"><img src={eth} />Ethereum</div>
+              </Built>
+            )
+
+          }
+          {
+            isMobile &&(
+              <Built>
+                <img src={polygon} />
+                <img src={solana} />
+                <div className="eth"><img src={eth} />Ethereum</div>
+              </Built>
+            )
+          }
+
           <Title>
             <div>
               The

@@ -40,6 +40,18 @@ const Title = styled.div`
     color: #00EBA4;
     opacity: .96;
   }
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 15px;
+
+    span {
+      width: 100%;
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
 `
 
 const ItemBorder = styled.div`
@@ -121,7 +133,7 @@ const Airdrop: React.FC = () => {
         <Container>
           <Title>
             <div>
-              Join us For
+              <div>Join us For</div>
               <span>NFT Airdrop</span>
             </div>
           </Title>
