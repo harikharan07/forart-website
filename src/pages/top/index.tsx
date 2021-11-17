@@ -41,11 +41,11 @@ const Title = styled.div`
 
   .slogan{
       font-weight: 600;
-      font-size: 68px;
-      line-height: 100px;
+      font-size: 50px;
+      line-height: 70px;
       letter-spacing: 2px;
       color: #fff;
-      width: 700px;
+      width: 800px;
     }
 
   @media screen and (max-width: 1100px) {
@@ -68,7 +68,7 @@ const Top: React.FC = () => {
         <Container>
           <Title>
             <div>
-              <div className="slogan">AI + NFT + DeFi Everything is possible in Metaverse.</div>
+              <div className="slogan">Make NFT / Metaverse creation easier and more intresting</div>
               {/*<div className="foot">Built on</div>*/}
             </div>
           </Title>
