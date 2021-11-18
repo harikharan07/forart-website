@@ -66,7 +66,7 @@ const Foot:React.FC = () => {
   const EXTERNAL_LINKS: Array<{ icon: string, link: string }> = [
     { icon: TwitterIcon, link: 'https://twitter.com/forart_ai' },
     { icon: GithubIcon, link: 'https://github.com/Forart-co' },
-    { icon: DiscordIcon, link: '' },
+    { icon: DiscordIcon, link: 'https://discord.gg/RDaUkaW39S' },
     { icon: Telegram, link:'https://t.me/forart_co' }
   ]
 
