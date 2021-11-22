@@ -28,6 +28,12 @@ const FootMain = styled.div`
   img {
     width: 200px;
   }
+  
+  @media screen and (max-width: 1100px) {
+    width: 100vw;
+    margin-left: 0;
+    margin-top: 20px;
+  }
 `
 
 const Register = styled.div`
