@@ -11,6 +11,9 @@ const FootContent = styled.div`
   height: 250px;
   padding-top: 50px;
   position: relative;
+  
+  @media screen and (max-width: 1100px) {
+  }
 `
 
 const FootMain = styled.div`
@@ -35,6 +38,10 @@ const Register = styled.div`
   color: rgba(255,255,255,0.7);
   position: absolute;
   bottom: 0;
+  
+  @media screen and (max-width: 1100px) {
+    line-height: 20px;
+  }
 `
 
 const ExternalLinksContainer = styled.div`

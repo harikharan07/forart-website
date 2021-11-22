@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 1100px;
   padding-top: 30px;
-  background: radial-gradient(#00EBA4 5%, #000000 45%);
+  background: radial-gradient(#00EBA4 5%, #000000 45%) no-repeat;
   
   @media screen and (max-width: 1100px) {
     height: fit-content;
@@ -23,9 +23,13 @@ const RoadmapContainer = styled.div`
 `
 
 const RoadmapBorder = styled.div`
-
   width: 800px;
   height: 1000px;
+  
+  @media screen and (max-width: 1100px) {
+    width: 85vw;
+    height: fit-content;
+  }
   
 `
 
@@ -44,6 +48,15 @@ const Title = styled.div`
     color: #00EBA4;
     opacity: .96;
   }
+  
+  @media screen and (max-width: 1100px) {
+    margin-bottom: 50px;
+
+    span {
+      font-size: 36px;
+
+    }
+  }
 `
 
 const RoadmapItem = styled.div`
@@ -54,8 +67,6 @@ const RoadmapItem = styled.div`
   justify-content: space-between;
   position: relative;
   margin-bottom: 5px;
-  
- 
 
   &:before {
     content: '';
@@ -66,15 +77,16 @@ const RoadmapItem = styled.div`
     opacity: .4;
     left: 0;
     top: 0;
-
   }
-
-
+  
   &:nth-child(3) {
     .arrow {
       display: none;
     }
   }
+  
+ @media screen and (max-width: 1100px) {
+ }
   
 
 
@@ -110,9 +122,24 @@ const LeftArea = styled.div`
     width: 50px;
     top: 110px;
     right: 75px;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .describe {
+      width: 100%;
+      left: 0px;
+      font-size: 15px;
+    }
     
-   
+    .icon {
+      width: 25px;
+      right: 15px;
+    }
     
+    .arrow {
+      right: 20px;
+
+    }
   }
   
 `
@@ -131,7 +158,6 @@ const RightArea = styled.div`
     line-height: 29px;
     color: #fff;
     margin: 20px;
-
   }
   
   .item-detail {
@@ -140,6 +166,19 @@ const RightArea = styled.div`
     line-height: 19px;
     color: #fff;
     font-weight: 500;
+  }
+
+  @media screen and (max-width: 1100px) {
+    width: 70%;
+    .item-title{
+      font-size: 18px;
+      line-height: 12px;
+    }
+    .item-detail {
+      margin: 20px;
+      font-size: 13px;
+      line-height: 19px;
+    }
   }
   
 `

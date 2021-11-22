@@ -5,12 +5,12 @@ const Wrapper = styled.div`
   width: 100%;
   height: 750px;
   padding-top: 30px;
-  background: radial-gradient(#02A6F5 5%, #000000 50%);
+  background: radial-gradient(#02A6F5 5%, #000000 50%) no-repeat;
   
   @media screen and (max-width: 1100px) {
-    height: fit-content;
-    background-size: 60%;
-    background-position: top 50% left 20%;
+    height: 400px;
+    background-size: 100%;
+    background-position: top 50% left 50%;
   }
 `
 
@@ -77,6 +77,17 @@ const ItemBorder = styled.div`
     left: 0;
     top: 0;
   }
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    height: 220px;
+    margin: 0;
+    justify-content: center;
+    flex-direction: column;
+    &:before {
+      height: 250px;
+    }
+  }
 `
 
 const JoinContent = styled.div`
@@ -96,6 +107,15 @@ const JoinContent = styled.div`
   .join-item {
     margin-bottom: 30px;
   }
+  
+  @media screen and (max-width: 1100px) {
+    font-size: 16px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    .join-item {
+      margin-bottom: 12px;
+    }
+  }
 `
 
 const Result = styled.div`
@@ -111,6 +131,17 @@ const Result = styled.div`
     color: #00EBA4;
     font-size: 45px;
   }
+
+  @media screen and (max-width: 1100px) {
+    font-size: 18px;
+    align-items: center;
+    margin: 0;
+    top: 20px;
+    
+    p{
+      font-size: 18px;
+    }
+  }
   
   
 `
@@ -122,6 +153,12 @@ const Line = styled.div`
   background: linear-gradient(90deg,#00EBA4,#02A6F5);
   position: relative;
   top: -100px;
+  
+  @media screen and (max-width: 1100px) {
+    top: -10px;
+    width: 100vw;
+    margin: 0;
+  }
 `
 
 

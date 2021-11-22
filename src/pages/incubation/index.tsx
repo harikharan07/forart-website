@@ -148,7 +148,9 @@ const Line = styled.div`
   background: linear-gradient(90deg,#00EBA4,#02A6F5);
 
   @media screen and (max-width: 1100px) {
-    display: none;
+    top: -10px;
+    width: 100vw;
+    margin: 0;
   }
 `
 
