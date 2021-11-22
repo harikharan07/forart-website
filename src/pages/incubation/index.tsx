@@ -7,6 +7,14 @@ import One from '../../image/incubation/number-1.png'
 import Two from '../../image/incubation/number-2.png'
 import Three from '../../image/incubation/number-3.png'
 import Four from '../../image/incubation/number-4.png'
+import Owner from '../../image/incubation/owner.png'
+import Paint from '../../image/incubation/paint.png'
+import Saas from '../../image/incubation/saas.png'
+import SecurityIcon from '../../image/incubation/security.png'
+
+
+
+
 import { useMediaQuery } from 'react-responsive'
 
 
@@ -218,22 +226,22 @@ const Incubation: React.FC = () => {
 
   const items: WalletItem[] = [
     {
-      image:One,
+      image:Paint,
       title:'Deep Learning Artworks',
       detail: 'According to different artistic style needs, Deep Learning Kit can generate corresponding artworks or elements to assist the artist in the creation of NFT / Metaverse. '
     },
     {
-      image:Two,
+      image:Saas,
       title:'NFT SaaS',
       detail: 'Provide standard NFT / Metaverse creation specifications and agreements to form a "SaaS" service, and provide fast NFT Airdrop services for project parties and third-party platforms.'
     },
     {
-      image:Three,
+      image:Owner,
       title:'Ownership certification',
       detail: 'Provide ownership certification for the NFT / Metaverse created by the platform to ensure its uniqueness and scarcity.'
     },
     {
-      image:Four,
+      image:SecurityIcon,
       title:'Security',
       detail: 'Platform smart contracts will be audited by well-known and authoritative security certification companies in the industry to ensure the security of NFT / Metaverse transactions.'
     }
