@@ -38,6 +38,7 @@ const Container = styled.div`
 
 const Title = styled.div`
   text-align: left;
+  margin-top: 130px;
 
 
   .slogan{
@@ -80,6 +81,11 @@ const ButtonContainer = styled.div`
 `
 
 const Top: React.FC = () => {
+
+  // const toApp = () => {
+  //   window.location.href='https://app.forart.co'
+  // }
+
   return (
     <Wrapper>
       <div className="filter">
@@ -92,7 +98,7 @@ const Top: React.FC = () => {
             </div>
           </Title>
           <ButtonContainer>
-            <StyledButton>Launch App</StyledButton>
+            <a href="https://app.forart.co" target="_blank" rel="noreferrer"><StyledButton>Launch App</StyledButton></a>
           </ButtonContainer>
         </Container>
       </div>

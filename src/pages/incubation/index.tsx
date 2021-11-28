@@ -266,7 +266,7 @@ const Incubation: React.FC = () => {
                 </div>
 
                 <img src={solana} style={{ width:'150px' }} />
-                {/*<div className="eth"><img src={eth} />Ethereum</div>*/}
+                <div className="eth"><img src={eth} />Ethereum</div>
               </Built>
             )
 

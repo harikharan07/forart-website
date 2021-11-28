@@ -8,7 +8,7 @@ import Telegram from '../../image/foot/Telegram.png'
 
 
 const FootContent = styled.div`
-  height: 250px;
+  height: 300px;
   padding-top: 50px;
   position: relative;
   

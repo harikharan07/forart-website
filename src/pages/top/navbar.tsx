@@ -70,6 +70,10 @@ const NavLinksContainer = styled.div`
     font-weight: bold;
     cursor: pointer;
     
+    a{
+      color: white;
+    }
+    
     img {
       width: 30px;
     }
