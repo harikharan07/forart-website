@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Navbar from './navbar'
 import BannerImage from '../../image/top/banner.jpg'
+import { Button } from 'antd'
 
 
 const Wrapper = styled.div`
@@ -60,6 +61,24 @@ const Title = styled.div`
 
 `
 
+const StyledButton = styled(Button)`
+  background-image: linear-gradient(to right, #00EBA4, #02A6F5);
+  height: 50px;
+  border: none;
+  font-size: 18px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: start;
+  width: 1200px;
+  margin: 25px 0;
+
+`
+
 const Top: React.FC = () => {
   return (
     <Wrapper>
@@ -72,6 +91,9 @@ const Top: React.FC = () => {
               {/*<div className="foot">Built on</div>*/}
             </div>
           </Title>
+          <ButtonContainer>
+            <StyledButton>Launch App</StyledButton>
+          </ButtonContainer>
         </Container>
       </div>
     </Wrapper>

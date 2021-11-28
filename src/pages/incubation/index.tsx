@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import solana from '../../image/incubation/solana.svg'
-import polygon from '../../image/incubation/polygon.svg'
+import celo from '../../image/incubation/celo.svg'
 import eth from '../../image/incubation/eth.png'
 import One from '../../image/incubation/number-1.png'
 import Two from '../../image/incubation/number-2.png'
@@ -20,7 +20,7 @@ import { useMediaQuery } from 'react-responsive'
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 800px;
+  height:fit-content;
   padding-top: 150px;
   background: radial-gradient(#48A283 3%, black 45%) no-repeat;
   
@@ -203,6 +203,13 @@ const Built = styled.div`
       width: 70px;
     }
     
+    .celo {
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    
     .eth {
       font-size: 14px;
       img {
@@ -254,9 +261,12 @@ const Incubation: React.FC = () => {
             !isMobile && (
               <Built>
                 Built on
-                <img src={polygon} />
-                <img src={solana} />
-                <div className="eth"><img src={eth} />Ethereum</div>
+                <div className="celo">
+                  <img src={celo} /> Celo
+                </div>
+
+                <img src={solana} style={{ width:'150px' }} />
+                {/*<div className="eth"><img src={eth} />Ethereum</div>*/}
               </Built>
             )
 
@@ -264,7 +274,7 @@ const Incubation: React.FC = () => {
           {
             isMobile &&(
               <Built>
-                <img src={polygon} />
+                <img src={celo}  />
                 <img src={solana} />
                 <div className="eth"><img src={eth} />Ethereum</div>
               </Built>
