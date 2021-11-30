@@ -61,7 +61,7 @@ const NavLinksContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 600px;
+  width: 450px;
 
   li {
     list-style: none;
@@ -92,11 +92,12 @@ const Navbar: React.FC = () => {
           <img src={LogoIcon} />
         </Logo>
         <NavLinksContainer id="NavLinksContainer">
-          <li><a onClick={() => scrollToPart('Incubation')}>Incubation</a></li>
-          <li><a onClick={() => scrollToPart('Mint')}>Mint</a></li>
-          <li><a onClick={() => scrollToPart('MetaPlus')}>MetaPlus</a></li>
-          <li><a onClick={() => scrollToPart('Airdrop')}>Airdrop</a></li>
-          <li><a onClick={() => scrollToPart('Roadmap')}>Roadmap</a></li>
+          <li><a href="https://app.forart.co/" target="_blank" rel="noreferrer">Dapp</a></li>
+          <li><a>Dosc</a></li>
+          <li><a>Medium</a></li>
+          {/*<li><a onClick={() => scrollToPart('MetaPlus')}>MetaPlus</a></li>*/}
+          {/*<li><a onClick={() => scrollToPart('Airdrop')}>Airdrop</a></li>*/}
+          {/*<li><a onClick={() => scrollToPart('Roadmap')}>Roadmap</a></li>*/}
           <li><a href={'https://t.me/forart_co'} target="_blank" rel="noreferrer"><img className="telegram" src={telegram} /></a></li>
           <li><a href={'https://twitter.com/forart_ai'} target="_blank" rel="noreferrer"><img className="twitter" src={twitter} /></a></li>
         </NavLinksContainer>
