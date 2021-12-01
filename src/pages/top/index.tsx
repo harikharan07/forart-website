@@ -70,14 +70,18 @@ const StyledButton = styled(Button)`
   color: white;
   font-weight: bolder;
   border-radius: 10px;
+  
 `
 
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: start;
-  width: 1200px;
-  margin: 25px 0;
-
+  margin-top: 20px;
+  width: 100%;
+  
+  @media screen and (max-width: 1100px) {
+    justify-content: center;
+  }
 `
 
 const Top: React.FC = () => {

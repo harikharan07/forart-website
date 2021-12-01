@@ -107,14 +107,14 @@ const LeftArea = styled.div`
   }
 
   .icon {
-    width: 50px;
-    padding: 20px;
+    width: 60px;
+    padding: 15px;
     border-radius: 90px;
     background: linear-gradient(270deg, #67ebba, #67eaba .34%, #69c2ce 15.61%, #6ba1de 31.22%, #6c87ea 47.25%, #6d75f3 63.72%, #6e6af8 80.92%, #6e66fa);
     position: absolute;
     box-shadow: -5px 5px 5px #212121;
     bottom: 200px;
-    right: 55px;
+    right: 65px;
   }
 
   .arrow {
@@ -127,13 +127,14 @@ const LeftArea = styled.div`
   @media screen and (max-width: 1100px) {
     .describe {
       width: 100%;
-      left: 0px;
-      font-size: 15px;
+      left: 5px;
+      font-size: 13px;
     }
     
     .icon {
-      width: 25px;
-      right: 15px;
+      padding: 10px;
+      width: 45px;
+      right: 20px;
     }
     
     .arrow {

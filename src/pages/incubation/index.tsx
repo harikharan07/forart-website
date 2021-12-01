@@ -112,7 +112,7 @@ const ItemBorder = styled.div`
 
 const ItemContainer = styled.div`
   padding: 20px 55px;
-  width: 450px;
+  width: 455px;
   height: 110px;
   text-align: left;
 
