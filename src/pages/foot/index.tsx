@@ -80,7 +80,7 @@ const Foot:React.FC = () => {
     { icon: TwitterIcon, link: 'https://twitter.com/forart_ai' },
     { icon: GithubIcon, link: 'https://github.com/Forart-co' },
     { icon: DiscordIcon, link: 'https://discord.gg/RDaUkaW39S' },
-    { icon: Telegram, link:'https://t.me/forart_co' }
+    { icon: Telegram, link:'https://t.me/forart_ai' }
   ]
 
   return (
